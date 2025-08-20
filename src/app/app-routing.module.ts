@@ -8,13 +8,18 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'sis-lilas', //alterar para home
     pathMatch: 'full'
   },
   {
     path: 'login',
     loadChildren: () => import('./page/login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'sis-lilas',
+    loadChildren: () => import('./page/sis-lilas/sis-lilas.module').then( m => m.SisLilasPageModule)
+  },
+
 ];
 
 @NgModule({
